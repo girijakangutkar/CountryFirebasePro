@@ -15,9 +15,7 @@ function CountryContext({ children }) {
   async function fetchCountries() {
     setLoading(true);
     try {
-      const response = await fetch(
-        "https://react-one-123a6-default-rtdb.asia-southeast1.firebasedatabase.app/countries.json"
-      );
+      const response = await fetch(`${url}`);
       //   const info = response.data.countries;
       const info = await response.json();
       console.log(info);
